@@ -19,11 +19,14 @@ public class Ejercicio02 {
 			numAleatorio[i] = (int) (Math.random() * 100 + 1); // Calculamos i en la posición que se encuentra en el for
 			System.out.println(numAleatorio[i]); // Y asi lo imprimimos los numeros aleatorios
 		}
-		for (int i = 0; i < numAleatorio.length; i++) { // Creamos un for que recorra el array 
-			if (numAleatorio[i] % 2 == 0) {
-				pares = Arrays.copyOf(pares, pares.length + 1);
-				pares[pares.length - 1] = numAleatorio[i];
+		for (int i = 0; i < numAleatorio.length; i++) { // Creamos un for que recorra el array
+			if (numAleatorio[i] % 2 == 0) { // Pare detectar los numeros par hacemos un if
+				pares = Arrays.copyOf(pares, pares.length + 1); // vamos añadiendo los pares al nuevo array vacio y cada
+																// vez que añadamos ampliamos el array
+				pares[pares.length - 1] = numAleatorio[i]; // usamos el array de los numeros pares - 1 para localizar el indice
 			} else {
+				impares = Arrays.copyOf(impares,  impares.length +1); 
+				impares [impares.length - 1] = numAleatorio[i];
 			}
 		}
 		System.arraycopy(pares, 0, numAleatorio, 0, pares.length);
