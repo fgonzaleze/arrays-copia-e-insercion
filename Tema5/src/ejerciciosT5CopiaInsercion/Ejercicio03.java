@@ -26,7 +26,7 @@ public class Ejercicio03 {
 	}
 
 	public static void main(String[] args) {
-		int lista[] = new int[10]; // Hacemos el array de longitud 20
+		int lista[] = new int[10]; // Hacemos el array de longitud 10
 		int primo[] = new int[0];
 		int noPrimo[] = new int[0];
 		Scanner sc = new Scanner(System.in); // Abrimos escáner

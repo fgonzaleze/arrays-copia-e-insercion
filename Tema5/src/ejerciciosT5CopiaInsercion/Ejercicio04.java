@@ -1,5 +1,8 @@
 package ejerciciosT5CopiaInsercion;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Ejercicio04 {
 	/**
 	 * 
@@ -10,8 +13,15 @@ public class Ejercicio04 {
 	 * 
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int tablaEnteros[] = new int[10]; // Hacemos el array de longitud 10
+		int tablaEnterosSinRepetir[] = new int[0];
+		Scanner sc = new Scanner(System.in); // Abrimos escáner
+		for (int i = 0; i < tablaEnteros.length; i++) { // For para ir pidiendo los números que irán al array
+			System.out.println("Introduce un número: ");
+			tablaEnteros[i] = sc.nextInt(); // Vamos rellenando el array
+		}
+		Arrays.sort(tablaEnteros); // Ordenamos la tabla 
+		
 	}
 
 }
