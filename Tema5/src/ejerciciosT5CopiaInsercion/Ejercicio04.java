@@ -14,25 +14,36 @@ public class Ejercicio04 {
 	 */
 	public static void main(String[] args) {
 		int tablaEnteros[] = new int[10]; // Hacemos el array de longitud 10
-		int tablaEnterosSinRepetir[] = new int[10];
+		int tablaEnterosSinRepetir[] = new int[10]; // Array para los numeros sin repetir
 		int contador = 0;
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
 		for (int i = 0; i < tablaEnteros.length; i++) { // For para ir pidiendo los números que irán al array
 			System.out.println("Introduce un número: ");
 			tablaEnteros[i] = sc.nextInt(); // Vamos rellenando el array
 		}
-		Arrays.sort(tablaEnteros); // Ordenamos la tabla 
+		Arrays.sort(tablaEnteros); // Ordenamos la tabla
+
+		// En este bucle se va a rellenar la tabla sin numeros repetidos El bucle
+		// recorre cada uno de los elementos del array "tablaEnteros" y comprueba si el
+		// valor actual es diferente al valor anterior. Si es así, añade ese valor a
+		// "tablaSinRepetir" y aumenta el contador en 1.
+
 		for (int i = 0; i < tablaEnteros.length; i++) {
-            if (i == 0 || tablaEnteros[i] != tablaEnteros[i - 1]) {
-                tablaEnterosSinRepetir[contador++] = tablaEnteros[i];
-            }
-        } 
+			if (i == 0 || tablaEnteros[i] != tablaEnteros[i - 1]) { // El primer if es para el caso de que sea el primer
+																	// elemento, ya que no tiene un valor anterior para
+																	// comparar. El segundo if es para comparar si el
+																	// valor actual es diferente al valor anterior, en
+																	// caso contrario, se omite.
+				tablaEnterosSinRepetir[contador++] = tablaEnteros[i];
+			}
+		}
+		// System.out.println(Arrays.toString(tablaEnterosSinRepetir)); //Imprime los
+		// números con 0
+
 		System.out.println("Tabla sin valores repetidos: ");
-        for (int i = 0; i < contador; i++) {
-            System.out.print(tablaEnterosSinRepetir[i] + " ");
-        }
-	       
-	    }
+		for (int i = 0; i < contador; i++) { // No imprime los 0
+			System.out.print(tablaEnterosSinRepetir[i] + " ");
+		}
+
 	}
-
-
+}
