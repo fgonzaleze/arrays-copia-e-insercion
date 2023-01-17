@@ -27,16 +27,9 @@ public class Ejercicio03 {
 
 	public static void main(String[] args) {
 		int lista[] = new int[10]; // Hacemos el array de longitud 10
-		int primo[] = new int[0];
-		int noPrimo[] = new int[0];
+		int primo[] = new int[0]; // Array para los primos incializado a 0 para aumentar su longitud
+		int noPrimo[] = new int[0]; // Array para almacenar los noPrimos incializado en 0 porque aumentaremos su longitud
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
-		/*
-		 * for (int i = 0; i < lista.length; i++) { // Hacemos un for donde establecemos
-		 * que acabe cuando llegue al // final de la tabla numAleatorio con .length
-		 * lista[i] = (int) (Math.random() * 101); // Calculamos i en la posición que se
-		 * encuentra en el for System.out.println(lista[i]); // Y asi lo imprimimos los
-		 * numeros aleatorios
-		 */
 		for (int i = 0; i < lista.length; i++) { // For para ir pidiendo los números que irán al array
 			System.out.println("Introduce un número: ");
 			lista[i] = sc.nextInt(); // Vamos rellenando el array

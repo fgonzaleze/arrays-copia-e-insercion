@@ -14,7 +14,7 @@ public class Ejercicio04 {
 	 */
 	public static void main(String[] args) {
 		int tablaEnteros[] = new int[10]; // Hacemos el array de longitud 10
-		int tablaEnterosSinRepetir[] = new int[10]; // Array para los numeros sin repetir
+		int tablaEnterosSinRepetir[] = new int[0]; // Array para los numeros sin repetir
 		int contador = 0;
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
 		for (int i = 0; i < tablaEnteros.length; i++) { // For para ir pidiendo los números que irán al array
@@ -34,16 +34,13 @@ public class Ejercicio04 {
 																	// comparar. El segundo if es para comparar si el
 																	// valor actual es diferente al valor anterior, en
 																	// caso contrario, se omite.
+				tablaEnterosSinRepetir = Arrays.copyOf(tablaEnterosSinRepetir, tablaEnterosSinRepetir.length + 1);
 				tablaEnterosSinRepetir[contador++] = tablaEnteros[i];
 			}
 		}
-		// System.out.println(Arrays.toString(tablaEnterosSinRepetir)); //Imprime los
-		// números con 0
 
-		System.out.println("Tabla sin valores repetidos: ");
-		for (int i = 0; i < contador; i++) { // No imprime los 0
-			System.out.print(tablaEnterosSinRepetir[i] + " ");
-		}
-
+		System.out.println("Tabla sin valores repetidos: "); // Para imprimir la tabla 
+		System.out.println(Arrays.toString(tablaEnterosSinRepetir));
+		sc.close();
 	}
 }
