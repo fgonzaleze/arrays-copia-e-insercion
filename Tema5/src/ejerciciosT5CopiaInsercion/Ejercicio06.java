@@ -13,12 +13,12 @@ public class Ejercicio06 {
 	 */
 
 	public static void main(String[] args) {
-		int tablaOrdenada[] = new int[100]; // Array para los numeros pares
-		int tablaInversa[] = new int[100];
-		int contador = 0;
+		int tablaOrdenada[] = new int[100]; // Array para los 100 numeros
+		int tablaInversa[] = new int[100]; // Array para los 100 numeros a la inversa
+		int contador = 0; // Contador auxiliar
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
 		for (int i = 0; i < tablaOrdenada.length; i++) { // For para ir pidiendo los números que irán al array
-			tablaOrdenada[i] = i + 1; // Vamos rellenando el array
+			tablaOrdenada[i] = i + 1; // Vamos rellenando el array sumando 1 
 		}
 		for (int i = tablaOrdenada.length - 1; i >= 0; i--) { // Declaramos el bucle en 0 ya que es descendente
 			
@@ -26,8 +26,9 @@ public class Ejercicio06 {
 			contador++; // Contador lo colocamos abajo., ya que la primera posicion es el 100
 		}
 		System.out.println("Tabla Ordenada:");
-		System.out.println(Arrays.toString(tablaOrdenada));
+		System.out.println(Arrays.toString(tablaOrdenada)); // Mostramos la tabla ordenada
 		System.out.println("Tabla Desordenada:");
-		System.out.println(Arrays.toString(tablaInversa));
+		System.out.println(Arrays.toString(tablaInversa)); // Mostramos la tabla al revés
+		sc.close(); // Cerramos escaner
 	}
 }
