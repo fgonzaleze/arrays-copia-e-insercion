@@ -14,10 +14,10 @@ public class Ejercicio07 {
 		 * menú se repetirá indefinidamente hasta que el usuario elija la opción ‘c’ que
 		 * terminará el programa.
 		 */
-		int tabla[] = new int[10];
-		String opcion = "x";
-		int valor = 0;
-		int posicion = 0;
+		int tabla[] = new int[10]; // Creamos la tabla que será de un tamaño 10
+		String opcion = "x"; // String que será la opción declarada y ponemos un valor para incializarla
+		int valor = 0; // Creamos una variable para el valor introducido y lo declaramos a 0
+		int posicion = 0; // Creamos la int posicion y lo declaramos a 0
 
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
 		for (int i = 0; i < tabla.length; i++) { // For para ir pidiendo los números que irán al array
@@ -28,12 +28,12 @@ public class Ejercicio07 {
 			System.out.println("a: Mostrar Valores");
 			System.out.println("b: Introducir Valores");
 			System.out.println("c: Salir");
-			opcion = sc.next();
-			switch (opcion) {
-			case "a":
+			opcion = sc.next(); // La opción será el valor que pongamos por consola
+			switch (opcion) { // Usamos un switch para la elección la menu
+			case "a": // para cuando escriban a
 				System.out.println(Arrays.toString(tabla)); // Y asi lo imprimimos los numeros aleatorios
 				break;
-			case "b":
+			case "b": // para cuando escriban b
 				System.out.println("Introduce un valor: ");
 				valor = sc.nextInt();
 				System.out.println("Introduce una posición: ");
@@ -43,15 +43,14 @@ public class Ejercicio07 {
 				tabla[posicion] = valor;
 				System.out.println(Arrays.toString(tabla));
 				break;
-			case "c":
+			case "c": // Para cuando escriban c
 				System.out.println("El programa ha finalizado");
 				break;
-			default:
+			default: // Default en caso de que se introduzca una opción incorrecta
 				System.out.println("Ha introducido una opción incorrecta");
 			}
-
 		}
-		sc.close();
+		sc.close(); // Cerramos escaner
 
 	}
 
