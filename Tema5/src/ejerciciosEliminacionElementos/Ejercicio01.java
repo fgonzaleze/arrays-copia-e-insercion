@@ -14,13 +14,12 @@ public class Ejercicio01 {
 		 * 
 		 */
 		int tabla[] = new int[20]; // Creamos la tabla que será de un tamaño 20
-		int pares[] = new int[0];
 		int contador = 0;
 
 		Scanner sc = new Scanner(System.in); // Abrimos escáner
 		for (int i = 0; i < tabla.length; i++) { // For para ir pidiendo los números que irán al array
 			tabla[i] = (int) (Math.random() * 100 + 1); // Calculamos i en la posición que se encuentra en el for
-		}
+		} 
 		while (contador < tabla.length) {
 			if (tabla[contador] % 2 == 0) {
 				contador++;
@@ -29,7 +28,15 @@ public class Ejercicio01 {
 				tabla = Arrays.copyOf(tabla, tabla.length - 1);
 			}
 		}
-		
+		/** Forma de hacerlo con bucles for 
+		 * 
+		 * for (int i = tabla.length-1; i >= 0; i--){
+		 * if (tabla[i] % 2 != 0) {
+		 * System.arraycopy(tabla, i + 1, tabla, i, tabla.length - i -1);
+		 * tabla = Arrays.copyOf(tabla, tabla.length - 1);
+		 * }
+		 * }
+		 */
 		System.out.println(Arrays.toString(tabla));
 	}
 }
