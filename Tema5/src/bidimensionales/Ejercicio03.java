@@ -25,8 +25,7 @@ public class Ejercicio03 {
 				int max, min, suma;
 				double media;
 
-				// Creación del Scanner
-				Scanner sc = new Scanner(System.in);
+		
 
 				for (int i = 0; i < notas.length; i++) {
 					// Le pido al alumno las notas

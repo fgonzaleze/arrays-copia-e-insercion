@@ -1,5 +1,7 @@
 package bidimensionales;
 
+import java.util.Arrays;
+
 public class Ejercicio02 {
 
 	public static void main(String[] args) {
@@ -9,6 +11,16 @@ public class Ejercicio02 {
 		 * Luego mostrará la matriz por pantalla.
 		 * 
 		 */
+		   //Declaramos las variables
+        int [][] tabla = new int[10][10];
+
+        for (int i = 0; i < tabla.length; i++) {
+            for (int j = 0; j < tabla[1].length; j++) {
+                tabla[i][j] = i*j;                          //Rellenamos el array
+            }
+            System.out.println(Arrays.toString(tabla[i])); //Imprimimos el array
+        }
+    }
 	}
 
-}
+
