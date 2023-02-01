@@ -42,7 +42,7 @@ public class Ejercicio05 {
 		}
 		System.out.print("|");
 		// Sumamos las columnas con un bucle for
-		for (int z = 0; z < 5; z++) {
+		for (int z = 0; z < 5; z++) { 
 
 			aux = 0; // Reiniciamos la variable aux a 0 cada vez que pase por aqui
 
@@ -55,7 +55,7 @@ public class Ejercicio05 {
 		}
 		// Imprimimos lo que seria la suma total
 		System.out.print(" = ");
-		System.out.print(sumaColumnas + sumaFilas);
+		System.out.print(sumaFilas);
 
 	}
 }
