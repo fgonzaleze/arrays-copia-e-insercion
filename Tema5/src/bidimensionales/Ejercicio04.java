@@ -25,7 +25,7 @@ public class Ejercicio04 {
         num[2][3] = 9;
         num[2][5] = 11;
 
-        //TODO: cambiar los 0 que no han sido introducidos manualmente por un un espacio en blanco
+        //Cambiar los 0 que no han sido introducidos manualmente por un un espacio en blanco
 
         for (int i = 0; i < num.length; i++) {
             System.out.println(Arrays.toString(num[i]));

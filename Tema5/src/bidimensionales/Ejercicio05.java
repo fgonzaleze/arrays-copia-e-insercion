@@ -16,7 +16,6 @@ public class Ejercicio05 {
 		// Declaramos las variables
 		int[][] tabla = new int[4][5]; // 4 filas y 5 columnas
 		int sumaFilas = 0;
-		int sumaColumnas = 0;
 		int aux = 0;
 
 		// Rellenamos la tabla con los numeros aleatorios con math.random
