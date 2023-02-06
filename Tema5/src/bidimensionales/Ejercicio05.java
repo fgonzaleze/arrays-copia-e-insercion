@@ -48,7 +48,6 @@ public class Ejercicio05 {
 			for (int y = 0; y < 4; y++) {
 				aux += tabla[y][z]; // Le vamos sumando los numeros que vamos leyendo a la variable auxiliar
 			}
-			sumaColumnas += aux; // Le sumamos a la variable sumaColumnas el total de la suma auxiliar
 
 			System.out.print(aux + "|"); // La imprimimos por pantalla y separamos los numeros con un espacio
 		}
