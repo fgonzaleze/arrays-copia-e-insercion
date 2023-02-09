@@ -21,7 +21,7 @@ public class Ejercicio01 {
 				// Para que la posicion en la que se encuentra el indice sea 10 * i + j
 				tabla[i][j] = 10 * i + j;
 			}
-			// Imprimimos 
+			// Imprimimos la tabla
 			System.out.println(Arrays.toString(tabla[i])); 
 		}
 	}

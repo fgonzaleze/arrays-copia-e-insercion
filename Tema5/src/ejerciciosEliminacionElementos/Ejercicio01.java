@@ -20,10 +20,11 @@ public class Ejercicio01 {
 		for (int i = 0; i < tabla.length; i++) { // For para ir pidiendo los números que irán al array
 			tabla[i] = (int) (Math.random() * 100 + 1); // Calculamos i en la posición que se encuentra en el for
 		} 
-		while (contador < tabla.length) {
-			if (tabla[contador] % 2 == 0) {
-				contador++;
+		while (contador < tabla.length) { 
+			if (tabla[contador] % 2 == 0) { // Identificar los pares
+				contador++; // Para salir del bucle
 			} else {
+				// En caso de que sea impar, lo copiamos de nuevo a la tabla
 				System.arraycopy(tabla, contador + 1, tabla, contador, tabla.length - contador -1);
 				tabla = Arrays.copyOf(tabla, tabla.length - 1);
 			}

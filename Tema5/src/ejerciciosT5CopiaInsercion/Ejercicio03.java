@@ -35,7 +35,7 @@ public class Ejercicio03 {
 			lista[i] = sc.nextInt(); // Vamos rellenando el array
 		}
 		for (int i = 0; i < lista.length; i++) { // Creamos un for que recorra el array
-			if (esPrimo(lista[i])) { // Pare detectar los numeros primos hacemos un if
+			if (esPrimo(lista[i])) { // Para detectar los numeros primos hacemos un if
 				primo = Arrays.copyOf(primo, primo.length + 1); // vamos añadiendo los primos al nuevo array vacio y
 																// cada vez que añadamos ampliamos el array
 				primo[primo.length - 1] = lista[i]; // usamos el mismo metodo array de los numeros primos - 1 para

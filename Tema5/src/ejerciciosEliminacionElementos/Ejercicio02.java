@@ -18,15 +18,15 @@ public class Ejercicio02 {
 			System.out.println("Introduce un número: ");
 			tabla[i] = sc.nextInt(); // Vamos rellenando el array
 		}
-		while (contador < tabla.length) {
+		while (contador < tabla.length) { // Creamos un bucle while para eliminar los numeros primos
 			if (tabla[contador] % 2 == 0) {
-				contador++;
-			} else {
+				contador++; // Contador para poder salir del bucle
+			} else { 
 				System.arraycopy(tabla, contador + 1, tabla, contador, tabla.length - contador -1);
-				tabla = Arrays.copyOf(tabla, tabla.length - 1);
+				tabla = Arrays.copyOf(tabla, tabla.length - 1); // Copiamos la tabla para ir modificandola
 			}
 		}
-		System.out.println(Arrays.toString(tabla));
+		System.out.println(Arrays.toString(tabla)); // Imprimimos por consola la tabla
 		sc.close();
 	}
 
